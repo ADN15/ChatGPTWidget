@@ -3,18 +3,30 @@
   template.innerHTML = `
     <style>
       body { font-family: Arial, sans-serif; background-color: #f3f4f6; color: #333; }
-      div { margin: 50px auto; max-width: 600px; padding: 20px; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px; }
+      div { margin: 50px auto; max-width: 1280px; padding: 20px; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px; }
       .input-container { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-      #prompt-input { flex-grow: 1; padding: 12px; font-size: 16px; border: 1px solid #ddd; border-radius: 5px; margin-right: 10px; transition: box-shadow 0.3s; }
-      #prompt-input:focus { outline: none; box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); border-color: #007bff; }
+      #prompt-input { flex-grow: 1;
+        padding: 12px;
+        font-size: 18px; /* Updated for bigger font size */
+        height: 50px; /* Updated for larger input field height */
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-right: 10px;
+        transition: box-shadow 0.3s;
+      }
+      #prompt-input:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        border-color: #007bff;
+      }
       #attachment-button { padding: 12px; font-size: 16px; background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; margin-right: 10px; transition: background-color 0.3s; }
       #attachment-button:hover { background-color: #e9ecef; }
       #file-input { display: none; }
-      #generate-button { padding: 12px 20px; font-size: 16px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
+      #generate-button { padding: 12px 20px; font-size: 16px; background-color: #000000; color: #ffffff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
       #generate-button:hover { background-color: #0056b3; }
       #response-container { max-height: 400px; overflow: auto; padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9; resize: both; }
       canvas { max-width: 100%; }
-      .file-info { display: flex; align-items: center; gap: 10px; margin-top: 10px; font-size: 14px; color: #555; }
+      .file-info { display: flex; align-items: center; font-size: 14px; color: #555; }
       .file-name { font-size: 14px; color: #333; }
       .delete-icon { font-size: 18px; color: red; cursor: pointer; display: none; transition: transform 0.2s; }
       .delete-icon:hover { transform: scale(1.2); }
