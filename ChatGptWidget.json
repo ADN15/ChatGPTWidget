@@ -28,7 +28,7 @@
         "apiKey": {
             "description": "Api Key of ChatGPT",
             "type": "string",
-            "default": "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"
+            "default": "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"
         }
     },
     "methods": {
